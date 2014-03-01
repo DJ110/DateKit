@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		62975DD618C16771000E97A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62975DD518C16771000E97A1 /* Foundation.framework */; };
-		62975DDB18C16771000E97A1 /* DateKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 62975DDA18C16771000E97A1 /* DateKit.h */; };
-		62975DDD18C16771000E97A1 /* DateKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 62975DDC18C16771000E97A1 /* DateKit.m */; };
 		62975DE418C16771000E97A1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62975DE318C16771000E97A1 /* XCTest.framework */; };
 		62975DE518C16771000E97A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62975DD518C16771000E97A1 /* Foundation.framework */; };
 		62975DE718C16771000E97A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62975DE618C16771000E97A1 /* UIKit.framework */; };
 		62975DEA18C16771000E97A1 /* libDateKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62975DD218C16771000E97A1 /* libDateKit.a */; };
 		62975DF018C16771000E97A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62975DEE18C16771000E97A1 /* InfoPlist.strings */; };
 		62975DF218C16771000E97A1 /* DateKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62975DF118C16771000E97A1 /* DateKitTests.m */; };
+		62975DFE18C16C36000E97A1 /* NSDate+DateKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 62975DFD18C16C36000E97A1 /* NSDate+DateKit.m */; };
+		62975E0118C17073000E97A1 /* NSString+DateKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 62975E0018C17073000E97A1 /* NSString+DateKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				62975DDB18C16771000E97A1 /* DateKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +44,16 @@
 		62975DD218C16771000E97A1 /* libDateKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDateKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		62975DD518C16771000E97A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		62975DD918C16771000E97A1 /* DateKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DateKit-Prefix.pch"; sourceTree = "<group>"; };
-		62975DDA18C16771000E97A1 /* DateKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateKit.h; sourceTree = "<group>"; };
-		62975DDC18C16771000E97A1 /* DateKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateKit.m; sourceTree = "<group>"; };
 		62975DE218C16771000E97A1 /* DateKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62975DE318C16771000E97A1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		62975DE618C16771000E97A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		62975DED18C16771000E97A1 /* DateKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DateKitTests-Info.plist"; sourceTree = "<group>"; };
 		62975DEF18C16771000E97A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		62975DF118C16771000E97A1 /* DateKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateKitTests.m; sourceTree = "<group>"; };
+		62975DFC18C16C36000E97A1 /* NSDate+DateKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DateKit.h"; sourceTree = "<group>"; };
+		62975DFD18C16C36000E97A1 /* NSDate+DateKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DateKit.m"; sourceTree = "<group>"; };
+		62975DFF18C17073000E97A1 /* NSString+DateKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DateKit.h"; sourceTree = "<group>"; };
+		62975E0018C17073000E97A1 /* NSString+DateKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DateKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +111,6 @@
 		62975DD718C16771000E97A1 /* DateKit */ = {
 			isa = PBXGroup;
 			children = (
-				62975DDA18C16771000E97A1 /* DateKit.h */,
-				62975DDC18C16771000E97A1 /* DateKit.m */,
 				62975DD818C16771000E97A1 /* Supporting Files */,
 			);
 			path = DateKit;
@@ -120,6 +119,7 @@
 		62975DD818C16771000E97A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				62975DFB18C16784000E97A1 /* Category */,
 				62975DD918C16771000E97A1 /* DateKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -141,6 +141,17 @@
 				62975DEE18C16771000E97A1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62975DFB18C16784000E97A1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				62975DFC18C16C36000E97A1 /* NSDate+DateKit.h */,
+				62975DFD18C16C36000E97A1 /* NSDate+DateKit.m */,
+				62975DFF18C17073000E97A1 /* NSString+DateKit.h */,
+				62975E0018C17073000E97A1 /* NSString+DateKit.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62975DDD18C16771000E97A1 /* DateKit.m in Sources */,
+				62975E0118C17073000E97A1 /* NSString+DateKit.m in Sources */,
+				62975DFE18C16C36000E97A1 /* NSDate+DateKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
