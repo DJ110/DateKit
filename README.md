@@ -57,7 +57,7 @@ Get 00:00:00 of this day
 Get 23:59:59 of this day
 - **+(NSDate *)getFromYMD:(int)year month:(int)month day:(int)day**
 Create new NSDate using year, month and day
-- **-(NSDate *)getFromTime:(int)hour minute:(int)minute second:(int)second**
+- **-(NSDate *)getFromTime:(int)hour minute:(int)minute second:(int)second**	
 Set time hour, minute, seconds
 - **-(NSString *)formatYear**
 Return yyyy format NSString
@@ -65,22 +65,22 @@ Return yyyy format NSString
 Return MM format(only month) NSString
 - **-(NSString *)formatDay**			
 Return dd format(only day) NSString
-- **-(NSString *)formatA**
+- **-(NSString *)formatA**		
 Return yyyy-MM-dd format NSString
-- **-(NSString *)formatB**
+- **-(NSString *)formatB**		
 Return yyyy/MM/dd format NSString
-- **-(NSString *)formatFull**
+- **-(NSString *)formatFull**	
 Return yyyy/MM/dd HH:mm:ss format NSString
-- **-(BOOL)before:(NSDate *)target**
+- **-(BOOL)before:(NSDate *)target**	
 Whether this day is before the target or not
-- **-(BOOL)after:(NSDate *)target**
+- **-(BOOL)after:(NSDate *)target**	
 Whether this day is after the target or not
 
 NSString methods
 - **-(NSDate *)parseYYYYMMddD**        	
 Parse NSString(YYYY-MM-dd) and return NSDate
 - **-(NSDate *)parseYYYYMMddS**			
-Parse NSString(YYYY-MM-dd) and return NSDate
+Parse NSString(YYYY/MM/dd) and return NSDate
 - **-(NSDate *)parseH**					
 Parse NSString(YYYY-MM-dd HH:mm) and return NSDate
 - **-(NSDate *)parseFull**				
@@ -98,8 +98,12 @@ Parse String
 NSString *str = @"2014/03/01";
 NSDate *format = [str parseYYYYMMddS];
 ```
+Web
+--------------
+[プロフェッショナルプログラマー(日本語)] [Propro].
 
 [DJ110]: http://atmarkplant.com
+[Propro]: http://atmarkplant-dj.blogspot.sg/2014/03/iosdatekit.html
 
 
 
