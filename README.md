@@ -23,7 +23,7 @@ This library is distributed under the terms of the MIT License (MIT)
 Methods
 --------------
 NSDate methods
-- -(NSDate *)getAdd:(int)days      	Add days and return new NSDate
+- **-(NSDate *)getAdd:(int)days**      	Add days and return new NSDate
 - -(NSDate *)getSub:(int)days      	Sub days and return new NSDate
 - -(NSDate *)getFirstDateOfMonth	Get the first day of the month
 - -(NSDate *)getLastMonthLast		Get the last day of the month
