@@ -94,5 +94,33 @@
     XCTAssertNil(format2, @"Wrong style");
 }
 
+-(void)testBetween {
+    NSString *str = @"2014-03-29";
+    NSDate *date = [str parseYYYYMMddD];
+    NSDate *date2 = [@"2014-03-23" parseYYYYMMddD];
+    NSDate *date3 = [[@"2014-03-24" parseYYYYMMddD] getFromTime:0 minute:0 second:0];
+    NSDate *date4 = [[@"2014-03-31" parseYYYYMMddD] getFromTime:23 minute:59 second:59];
+    NSDate *date5 = [[@"2014-04-01" parseYYYYMMddD] getFromTime:0 minute:0 second:0];
+    
+    
+    NSDate *target1 = [[@"2014-03-24" parseYYYYMMddD] getFromTime:0 minute:0 second:0];
+    NSDate *target2 = [[@"2014-03-31" parseYYYYMMddD] getFromTime:23 minute:59 second:59];
+    
+    XCTAssertTrue([date between:target1 to:target2]);
+    XCTAssertFalse([date2 between:target1 to:target2]);
+    XCTAssertTrue([date3 between:target1 to:target2]);
+    XCTAssertTrue([date4 between:target1 to:target2]);
+    XCTAssertFalse([date5 between:target1 to:target2]);
+}
+
+-(void)testSameDay {
+    NSDate *today = [NSDate date];
+    NSDate *begin = [today begin];
+    NSDate *end = [today end];
+    NSDate *tomorrow = [today getAdd:1];
+    
+    XCTAssertTrue([begin sameDay:end]);
+    XCTAssertFalse([begin sameDay:tomorrow]);
+}
 
 @end

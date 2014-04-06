@@ -20,6 +20,8 @@
 -(int)getWeekDay;
 -(BOOL)isWeekEnd;
 -(BOOL)isWeekDay;
+-(BOOL)sameDay:(NSDate *)target;
+
 -(int)getDay;
 -(int)getMonth;
 -(int)getYear;
@@ -37,9 +39,13 @@
 -(NSString *)formatDay;
 -(NSString *)formatA;
 -(NSString *)formatB;
+-(NSString *)formatWithoutSec;
 -(NSString *)formatFull;
+-(NSString *)formatTime;
+-(NSString *)formatTimeFull;
 
 -(BOOL)before:(NSDate *)target;
 -(BOOL)after:(NSDate *)target;
+-(BOOL)between:(NSDate *)from to:(NSDate *)to;
 
 @end

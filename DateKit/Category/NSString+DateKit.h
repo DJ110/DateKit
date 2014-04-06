@@ -13,6 +13,7 @@
 -(NSDate *)parseYYYYMMddD;
 -(NSDate *)parseYYYYMMddS;
 -(NSDate *)parseH;
+-(NSDate *)parseWithoutSec;
 -(NSDate *)parseFull;
 
 @end

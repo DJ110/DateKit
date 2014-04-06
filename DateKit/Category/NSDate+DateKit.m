@@ -87,6 +87,16 @@
     return ![self isWeekEnd];
 }
 
+-(BOOL)sameDay:(NSDate *)target {
+    NSCalendar *calendar1 = [NSCalendar currentCalendar];
+    NSDateComponents *comps1 = [calendar1 components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit fromDate:self];
+    
+    NSCalendar *calendar2 = [NSCalendar currentCalendar];
+    NSDateComponents *comps2 = [calendar2 components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekdayCalendarUnit fromDate:target];
+    
+    return [comps1 year] == [comps2 year] && [comps1 month] == [comps2 month] && [comps1 day] == [comps2 day];
+}
+
 -(int)getDay {
     NSDateComponents *comps;
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -234,9 +244,27 @@
     return [formatter stringFromDate:self];
 }
 
+-(NSString *)formatWithoutSec {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+    return [formatter stringFromDate:self];
+}
+
 -(NSString *)formatFull {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+    return [formatter stringFromDate:self];
+}
+
+-(NSString *)formatTime {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm"];
+    return [formatter stringFromDate:self];
+}
+
+-(NSString *)formatTimeFull {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm:ss"];
     return [formatter stringFromDate:self];
 }
 
@@ -268,5 +296,16 @@
     }
     return res;
 }
+
+-(BOOL)between:(NSDate *)from to:(NSDate *)to {
+    NSComparisonResult comp1 = [self compare:from];
+    BOOL res = comp1 == NSOrderedDescending || comp1 == NSOrderedSame;
+    if ( res ) {
+        NSComparisonResult comp2 = [self compare:to];
+        res = comp2 == NSOrderedAscending || comp2 == NSOrderedSame;
+    }
+    return res;
+}
+
 
 @end

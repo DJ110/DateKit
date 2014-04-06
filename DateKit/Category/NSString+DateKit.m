@@ -28,6 +28,12 @@
     return [formatter dateFromString:self];
 }
 
+-(NSDate *)parseWithoutSec {
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm"];
+    return [formatter dateFromString:self];
+}
+
 -(NSDate *)parseFull {
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];

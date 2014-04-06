@@ -37,8 +37,10 @@ Get the first day of the next month
 Get week day number 1:Sunday, 7:Saturday
 - **-(BOOL)isWeekEnd**					
 Whether this day is week end or not
-- **-(BOOL)isWeekDay**					
+- **-(BOOL)isWeekDay**				
 Whether this day is week day or not
+- **-(BOOL)sameDay:(NSDate *)target**
+Whether target day and this is same day or not
 - **-(int)getDay**						
 Get day number of this
 - **-(int)getMonth**					
@@ -69,19 +71,28 @@ Return dd format(only day) NSString
 Return yyyy-MM-dd format NSString
 - **-(NSString *)formatB**		
 Return yyyy/MM/dd format NSString
-- **-(NSString *)formatFull**	
+- **-(NSString *)formatWithoutSec**
+Return yyyy/MM/dd HH:mm format NSString
+- **-(NSString *)formatFull**
 Return yyyy/MM/dd HH:mm:ss format NSString
+- **-(NSString *)formatTime**
+Return HH:mm format NSString
+- **-(NSString *)formatTimeFull**
+Return HH:mm:ss format NSString
 - **-(BOOL)before:(NSDate *)target**	
 Whether this day is before the target or not
 - **-(BOOL)after:(NSDate *)target**	
 Whether this day is after the target or not
-
+- **-(BOOL)between:(NSDate *)from to:(NSDate *)to**
+Whether this day is between "from" and "to"
 NSString methods
 - **-(NSDate *)parseYYYYMMddD**        	
 Parse NSString(YYYY-MM-dd) and return NSDate
 - **-(NSDate *)parseYYYYMMddS**			
 Parse NSString(YYYY/MM/dd) and return NSDate
 - **-(NSDate *)parseH**					
+Parse NSString(YYYY-MM-dd HH:mm) and return NSDate
+- **-(NSDate *)parseWithoutSec**
 Parse NSString(YYYY-MM-dd HH:mm) and return NSDate
 - **-(NSDate *)parseFull**				
 Parse NSString(YYYY-MM-dd HH:mm:ss) and return NSDate
